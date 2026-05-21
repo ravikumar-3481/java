@@ -35,6 +35,17 @@ public class loop {
         }
     }
 
+    public static void calc(int a , int b) {
+        int sum = a + b;
+        int diff = a - b;
+        int product = a * b;
+        int quotient = a / b;
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+    }
+
     public static void main(String[] args) {
         int n = 5; // You can change this value to print a different pattern
         printPattern(n);
@@ -42,5 +53,7 @@ public class loop {
         printStarPatternReverse(n);
         System.out.println();
         takeInputData();
+        calc(10, 5);
+        
     }
 }
