@@ -5,8 +5,12 @@ public class MainApp {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number to calculate its factorial: ");
         int n = sc.nextInt();
-        int result = factorial.fact(n);
+        int result = functions.fact(n);
         System.out.println("Factorial of " + n + " is: " + result);
+        System.out.println();
+        functions.numberGuessingGame(sc);
+        System.out.println();
+        functions.calculateAreaOfCircle(sc);
         sc.close();
     }
 }
