@@ -19,6 +19,16 @@ public class searching {
       return -1;
     }
 
+    public static int linearSearch(int arr[], int target) {
+        System.out.println("Array elements are: " + Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public static void arrinput() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of the array: ");
@@ -29,13 +39,17 @@ public class searching {
             System.out.print((i + 1) + " Element : ");
             arr[i] = sc.nextInt();
         }
+        int[] arr1 = Arrays.copyOf(arr, arr.length);
         System.out.print("Enter the target element to search: ");
         int target = sc.nextInt();
         int result = binarySearch(arr, target);
-        if (result == -1) {
+        int result1 = linearSearch(arr1, target);
+        if (result == -1 && result1 == -1) {
             System.out.println("Element not found in the array.");
         } else {
-            System.out.println("Element found at index: " + result);
+            System.out.println();
+            System.out.println("Element found at index: " + result + " (Binary Search)");
+            System.out.println("Element found at index: " + result1 + " (Linear Search)");
         }
          sc.close();
       
